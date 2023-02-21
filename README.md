@@ -1,5 +1,5 @@
 # opencv_burr_size_analyzer
-Application for analyzing burr sizes in production, using OpenCV
+Application for analyzing burr sizes in production, using OpenCV, originally made in 2022
 
 Original task description:
 
