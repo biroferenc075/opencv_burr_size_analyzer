@@ -1,0 +1,46 @@
+##############################
+# Sorjaméret képfeldolgozás paraméterek
+##############################
+# forrásképek, bemeneti adatok és exportált fájlok helye ("-" azt jelenti, hogy ezzel a fájllal azonos mappa)
+location=-
+# bemeneti adatok szöveges fájlának neve
+data=data.txt
+# képek megjelenítése, azokra elméleti görbe és megtalált sorják berajzolása, a program gombnyomásra lép tovább, escape billentyűre kilép
+showRes=true
+# képek mentése fájlba
+saveRes=true
+# eredmények exportálása excel táblába
+exportResults=true
+# elméleti görbe x komponense
+eqx=6000*cos(t)-6000*3^(1/2)*arctanh((-1/2+sin(t+1/6*pi))/sin(t))+3843.11396678
+# elméleti görbe y komponense
+eqy=6000*sin(t)
+# elméleti görbe dx komponense
+veqx=-6000*sin(t)-6000*3^(1/2)*(cos(t+1/6*pi)/sin(t)-(-1/2+sin(t+1/6*pi))/sin(t)^2*cos(t))/(1-(-1/2+sin(t+1/6*pi))^2/sin(t)^2)
+# elméleti görbe dy komponense
+veqy=6000*cos(t)
+# t paraméter minimum értéke
+tmin=-0.4419
+# t paraméter maximum értéke
+tmax=1.5700
+# ennyi pixel van 1 mm-en
+pixmm=240 
+# ennyi pixellel "megtoldjuk" a képet, hogy azokat a sorjákat is megtaláljuk, amikhez tartozó vágási pont kilógna az eredeti képből
+padding=40
+##############################
+# Kép binarizálás paraméterek
+##############################
+# HSV színtérbeli csatorna száma, ami alapján történik a felbontás (Hue, Saturation, Value -> 0,1,2)
+coi=0
+# Zajeltávolítás módja, 0: Morfológiai zárás, 1: Morfológiai nyitás, 2: Medián elmosás
+noiseRemovalMode=1
+# Zajeltávolítás mérete/mértéke
+noiseRemovalSize=13
+# Előzetes elmosás mértéke (szintén zajeltávolításhoz)
+gaussianBlurSigma=10
+# Előzetes elmosás mérete
+gaussianBlurSize=5
+# Binarizálás küszöbértékének megadási módja 0: Otsu módszer, 1: Érték megadása kézzel (lentebb)
+thresholdType=1
+# Binarizálás küszöbértéke
+thresholdVal=22

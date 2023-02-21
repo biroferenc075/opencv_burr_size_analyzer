@@ -1,0 +1,13 @@
+Intro/bin/*
+Intro/obj/*
+packages/*
+Tests/bin/*
+Tests/obj/*
+.vs/OpenCvTemalabor/v14/.suo
+*.suo
+*.ide
+/.vs/*
+/Testing/bin/*
+/Testing/obj/*
+BurrSize/bin/*
+BurrSize/obj/*
